@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-import datetime
+from datetime import datetime
 
 from db_manager_configuration import DBManagerConfiguration
 from parse import Parser
 
 
 def run(parser):
-    console_string = f"[({DBManagerConfiguration.MODE})\
-            {datetime.strftime(datetime.now(), '%Y-%m-%d:%H-%M')}]"
+    console_string = f"[({DBManagerConfiguration.MODE}){
+        datetime.strftime(datetime.now(), '%Y-%m-%d:%H-%M')}]"
     while True:
         parser.parse(input(console_string))
 
