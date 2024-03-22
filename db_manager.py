@@ -6,9 +6,8 @@ from db_manager_configuration import DBManagerConfiguration
 from parse import Parser
 
 
-def run(parser):
-    console_string = f"[({DBManagerConfiguration.MODE}){
-        datetime.strftime(datetime.now(), '%Y-%m-%d:%H-%M')}]"
+def run(parser, date_time):
+    console_string = f"[({DBManagerConfiguration.MODE}){date_time}]"
     while True:
         parser.parse(input(console_string))
 
@@ -16,4 +15,5 @@ def run(parser):
 if __name__ == "__main__":
     print("Starting DB Manager...")
     parser = Parser()
-    run(parser)
+    date_time = datetime.strftime(datetime.now(), '%Y-%m-%d:%H-%M')
+    run(parser, date_time)
