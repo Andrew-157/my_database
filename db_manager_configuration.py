@@ -1,0 +1,4 @@
+
+
+class DBManagerConfiguration:
+    MODE = 'mgmt'
